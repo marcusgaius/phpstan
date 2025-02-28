@@ -1,7 +1,6 @@
 {
-	"name": "craftcms/phpstan",
+	"name": "marcusgaius/phpstan",
 	"description": "PHPStan configuration for Craft CMS projects",
-	"version": "1.0.0",
 	"require": {
 		"phpstan/phpstan": "^2.0",
 		"phpstan/phpstan-strict-rules": "^2.0"
