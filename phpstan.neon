@@ -1,7 +1,7 @@
 parameters:
     excludePaths:
         - ../../craftcms/cms/src/test/internal/*
-        - ../../craftcms/cms/src/config/composer-classes.php
+        - ../../craftcms/cms/src/config/composer-classes.php?
         - ../../craftcms/cms/src/config/mimeTypes.php
         - ../../craftcms/cms/src/views/debug/*
     scanFiles:
@@ -19,3 +19,18 @@ parameters:
             - end
         yii\base\ErrorHandler:
             - convertExceptionToError
+services:
+    - class: MarcusGaius\PHPStan\Reflection\CraftCMS\Query\AddressQueryCustomFieldReturnTypeExtension
+      tags: [phpstan.broker.dynamicMethodReturnTypeExtension]
+    - class: MarcusGaius\PHPStan\Reflection\CraftCMS\Query\AssetQueryCustomFieldReturnTypeExtension
+      tags: [phpstan.broker.dynamicMethodReturnTypeExtension]
+    - class: MarcusGaius\PHPStan\Reflection\CraftCMS\Query\CategoryQueryCustomFieldReturnTypeExtension
+      tags: [phpstan.broker.dynamicMethodReturnTypeExtension]
+    - class: MarcusGaius\PHPStan\Reflection\CraftCMS\Query\EntryQueryCustomFieldReturnTypeExtension
+      tags: [phpstan.broker.dynamicMethodReturnTypeExtension]
+    - class: MarcusGaius\PHPStan\Reflection\CraftCMS\Query\GlobalSetQueryCustomFieldReturnTypeExtension
+      tags: [phpstan.broker.dynamicMethodReturnTypeExtension]
+    - class: MarcusGaius\PHPStan\Reflection\CraftCMS\Query\ElementQueryCustomFieldReturnTypeExtension
+      tags: [phpstan.broker.dynamicMethodReturnTypeExtension]
+#    - class: MarcusGaius\PHPStan\Reflection\Mixin\CustomFieldMixinExtension
+#      tags: [phpstan.broker.methodsClassReflectionExtension]
