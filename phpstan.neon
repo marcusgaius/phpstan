@@ -19,6 +19,8 @@ parameters:
             - end
         yii\base\ErrorHandler:
             - convertExceptionToError
+    ignoreErrors:
+        - '#^Parameter \#3 \$with of method craft\\services\\Elements\:\:eagerLoadElements\(\) expects array\<int, craft\\elements\\db\\EagerLoadPlan\|string\>\|string, array\<int, list\<array\<string, list\<string\>\>\|string\>\|string\> given\.$#'
 services:
     - class: MarcusGaius\PHPStan\Reflection\CraftCMS\Query\AddressQueryCustomFieldReturnTypeExtension
       tags: [phpstan.broker.dynamicMethodReturnTypeExtension]
@@ -32,5 +34,7 @@ services:
       tags: [phpstan.broker.dynamicMethodReturnTypeExtension]
     - class: MarcusGaius\PHPStan\Reflection\CraftCMS\Query\ElementQueryCustomFieldReturnTypeExtension
       tags: [phpstan.broker.dynamicMethodReturnTypeExtension]
+    - class: MarcusGaius\PHPStan\Reflection\CraftCMS\EagerLoadElements
+      tags: [phpstan.phpDoc.typeNodeResolverExtension]
 #    - class: MarcusGaius\PHPStan\Reflection\Mixin\CustomFieldMixinExtension
 #      tags: [phpstan.broker.methodsClassReflectionExtension]
