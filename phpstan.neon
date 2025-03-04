@@ -10,6 +10,7 @@ parameters:
         - ../../twig/twig/src/Extension/CoreExtension.php
     stubFiles:
         - stubs/BaseYii.stub
+        - stubs/elements/conditions/ElementConditionRuleInterface.stub
         - stubs/console/Application.stub
         - stubs/web/Application.stub
     earlyTerminatingMethodCalls:
