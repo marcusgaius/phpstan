@@ -1,4 +1,5 @@
 parameters:
+    reportUnmatchedIgnoredErrors: false
     excludePaths:
         - ../../craftcms/cms/src/test/internal/*
         - ../../craftcms/cms/src/config/composer-classes.php?
